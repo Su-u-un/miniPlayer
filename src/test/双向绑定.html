@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="vue.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<body>
+
+<div id="app">
+  <span>
+    名字：{{name}}
+  </span>
+  <input type="text" v-model="name">
+  <span>
+    地址：{{info.adr}}
+  </span>
+  <input type="text" v-model="info.adr">
+</div>
+   <path d="M7.83773951454306e-15,-128 L-108.7909621757805,-48.95873931667282" class="GraphRenderer_line__3Qx_L GraphRenderer_directed__3lB43"></path><g transform="translate(-60.867617042889826,-83.77708763999662)"><text class="GraphRenderer_weight__3maoC" transform="rotate(144)" y="-4">2</text></g></g><g class="GraphRenderer_edge__qmq4Z"><path d="M121.73523408577965,-39.55417527999327 L12.944271909999173,-118.59543596332043" class="GraphRenderer_line__3Qx_L GraphRenderer_directed__3lB43"></path><g transform="translate(60.86761704288983,-83.77708763999664)"><text class="GraphRenderer_weight__3maoC" transform="rotate(-144)" y="-4">2</text></g></g><g class="GraphRenderer_edge__qmq4Z"><path d="M75.23651229343656,103.55417527999327 L4.944271909999173,-112.78309573927754" class="GraphRenderer_line__3Qx_L GraphRenderer_directed__3lB43"></path><g transform="translate(37.61825614671829,-12.222912360003363)"><text class="GraphRenderer_weight__3maoC" transform="rotate(-108.00000000000001)" y="-4">2</text></g></g><g class="GraphRenderer_edge__qmq4Z"><path d="M75.23651229343656,103.55417527999327 L-108.79096217578049,-30.14961124331367" class="GraphRenderer_line__3Qx_L GraphRenderer_directed__3lB43"></path><g transform="translate(-23.249360896171552,32.000000000000014)"><text class="GraphRenderer_weight__3maoC" transform="rotate(-144)" y="-4">-1</text></g></g><g class="GraphRenderer_edge__qmq4Z"><path d="M-75.23651229343655,103.55417527999327 L59.236512293436576,103.55417527999327" class="GraphRenderer_line__3Qx_L GraphRenderer_directed__3lB43"></path><g transform="translate(7.105427357601002e-15,103.55417527999327)"><text class="GraphRenderer_weight__3maoC" transform="rotate(0)" y="-4">3</text></g></g><g class="GraphRenderer_edge__qmq4Z"><path d="M-121.73523408577967,-39.55417527999325 L105.73523408577967,-39.55417527999327" class="GraphRenderer_line__3Qx_L GraphRenderer_directed__3lB43"></path><g transform="translate(-7.105427357601002e-15,-39.55417527999326)"><text class="GraphRenderer_weight__3maoC" transform="rotate(-3.3442330996830627e-15)" y="-4">5</text></g></g><g class="GraphRenderer_node__2_anC" transform="translate(7.83773951454306e-15,-128)"><circle class="GraphRenderer_circle__376bI" r="12"></circle><text class="GraphRenderer_id__1B0xF">0</text><text class="GraphRenderer_weight__3maoC" x="16"></text></g><g class="GraphRenderer_node__2_anC" transform="translate(121.73523408577965,-39.55417527999327)"><circle class="GraphRenderer_circle__376bI" r="12"></circle><text class="GraphRenderer_id__1B0xF">1</text><text class="GraphRenderer_weight__3maoC" x="16"></text></g><g class="GraphRenderer_node__2_anC" transform="translate(75.23651229343656,103.55417527999327)"><circle class="GraphRenderer_circle__376bI" r="12"></circle><text class="GraphRenderer_id__1B0xF">2</text><text class="GraphRenderer_weight__3maoC" x="16"></text></g><g class="GraphRenderer_node__2_anC" transform="translate(-75.23651229343655,103.55417527999327)"><circle class="GraphRenderer_circle__376bI" r="12"></circle><text class="GraphRenderer_id__1B0xF">3</text><text class="GraphRenderer_weight__3maoC" x="16"></text></g><g class="GraphRenderer_node__2_anC" transform="translate(-121.73523408577967,-39.55417527999325)"><circle class="GraphRenderer_circle__376bI" r="12"></circle><text class="GraphRenderer_id__1B0xF">4</text><text class="GraphRenderer_weight__3maoC" x="16"></text></g></svg>
+<script>
+  const vue = new Vue(
+    {
+      el:'#app',
+      data:{
+        name:'sun',
+        info:{
+          adr:'China',
+          age:21
+        }
+      }
+    }
+  )
+
+  console.log(vue);
+</script>
+
+</body>
+</html>

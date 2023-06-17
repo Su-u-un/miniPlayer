@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4092311 */
+  src: url('../icon/iconfont.eot?t=1686638010062'); /* IE9 */
+  src: url('../icon/iconfont.eot?t=1686638010062#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../icon/iconfont.woff2?t=1686638010062') format('woff2'),
+       url('../icon/iconfont.woff?t=1686638010062') format('woff'),
+       url('../icon/iconfont.ttf?t=1686638010062') format('truetype'),
+       url('../icon/iconfont.svg?t=1686638010062#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.player-24gf-volumeCross:before {
+  content: "\ea0f";
+}
+
+.player-icon_close:before {
+  content: "\e62c";
+}
+
+.player-24gf-volumeMiddle:before {
+  content: "\ea11";
+}
+
+.player-24gf-fullScreenEnter3:before {
+  content: "\ea7d";
+}
+
+.player-24gf-pause2:before {
+  content: "\ea81";
+}
+
+.player-24gf-play:before {
+  content: "\ea82";
+}
+
