@@ -1,13 +1,13 @@
-import ts from 'rollup-plugin-typescript2';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import serve from 'rollup-plugin-serve'
-import path from 'path'
-
-const mode = process.env.MODE;
-const isProd = mode === 'prod';
+import ts from 'rollup-plugin-typescript2';
+import babel from "rollup-plugin-babel";
+// import terser from '@rollup/plugin-terser';
+import postcss from 'rollup-plugin-postcss'
+import cssnano from 'cssnano'
+import commonjs from '@rollup/plugin-commonjs'
 
 export default {
-  input: `../index.ts`,
+  input: `./src/index.ts`,
   output: [
     {
       file: "./dist/index.cjs.js",
@@ -15,25 +15,30 @@ export default {
     },
     {
       file: "./dist/index.esm.js",
-      format: "esm",
+      format: "es",
     },
     {
       file: "./dist/index.umd.js",
       format: "umd",
-    },
+      name: "Player",
+    }
   ],
   plugins: [
+    ts(),
+    commonjs(),
     nodeResolve({
-      extensions:['.js', '.ts']
+      browser:true
     }),
-    ts({
-      tsconfig: path.resolve(__dirname, 'tsconfig.json')
+    babel(),
+    //打包css
+    postcss({
+      plugins:[
+        //压缩css
+        cssnano()
+      ],
+      extract:'css/index.css'
     }),
-    serve({
-      port: 3000,
-      contentBase:'', // 表示起的服务是在根目录下
-      openPage: '/public/index.html' , // 打开的是哪个文件
-      open: true // 默认打开浏览器
-    })
+    
   ],
+  
 };

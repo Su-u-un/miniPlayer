@@ -3,21 +3,31 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "--config webpack.config.prod.js",
-    "package": "rollup -c ./rollup.config.prod.js --target lib ./src/components/popView/index.ts --name popViewTemp --dest popViewTemp",
+    "build": "webpack --config webpack.config.prod.js",
+    "package": "rollup -c rollup.config.prod.js",
     "serve": "webpack-dev-server --config webpack.config.dev.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@rollup/plugin-commonjs": "24.0.1",
+    "@rollup/plugin-terser": "0.4.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^3.5.3",
+    "cssnano": "^6.0.1",
     "file-loader": "6.2.0",
     "html-webpack-plugin": "^4.3.0",
-    "rollup": "^3.25.1",
+    "postcss": "^8.4.24",
+    "rollup": "2.79.1",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.34.1",
     "style-loader": "^1.2.1",
     "ts-loader": "^8.1.0",
@@ -28,7 +38,9 @@
     "webpack-dev-server": "3.11.0"
   },
   "dependencies": {
+    "@rollup/plugin-babel": "6.0.3",
     "@rollup/plugin-node-resolve": "^15.1.0",
+    "niplayer": "^1.4.6",
     "rollup-plugin-serve": "^2.0.2"
   }
 }

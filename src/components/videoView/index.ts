@@ -1,4 +1,4 @@
-const styles = require('./index.css')
+const styles = require('./css/index.css')
 
 interface iVideo{
   url:string

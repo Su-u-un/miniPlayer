@@ -6,7 +6,9 @@
     <title>Title</title>
 </head>
 <body>
-<script src="./index.ts"></script>
+<!--<script src="index.ts"></script>-->
+<script src="../dist/index.umd.js"></script>
+<!--<script src="./src/components/videoView/index.ts"></script>-->
 <div class="view">
     <div data-url="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" data-title="一段视频">
         <img src="//i0.hdslb.com/bfs/archive/4bf2599f694db878a2b8dbbde700aa29507a726f.jpg@672w_378h_1c_!web-home-common-cover" alt="">
@@ -17,24 +19,6 @@
 <div id="test"></div>
 
 <script>
-  window.onload = function (){
-    let view = new view({
-      width:'880px',
-      height:'556px',
-      title,
-      pos:'center',
-      mask:true,
-      content:(dom)=>{
-        //el是容器所在的dom，作为参数传给video绑定
-        videoView({
-          url,
-          dom,
-          autoplay:false
-        })
-      }
-    })
-  }
-  
 </script>
 
 </body>

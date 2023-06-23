@@ -1,4 +1,4 @@
-const styles:any =require('./index.css')
+const styles =require('./css/index.css')
 
 //参数的定义
 interface iView {
